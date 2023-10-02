@@ -10,42 +10,46 @@ onMounted(() => {
     <div class="book-main">
         <div data-aos="fade-right" data-aos-duration="1500" class="book-info">
             <h2>Energy Women's Academy</h2>
-            <p class="title">Holistic Nutritionist & Lifestyle Cleanse Expert</p>
-            <p class="info">The various “hacks” described in the book are intended to help those dealing with weight loss. Her
-                suggestions are practical and easily incorporated into day-to-day living. Download the book today with just
-                one click!</p>
-                <div class="download">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza qoldirish</button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga yoziling!</span></h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                    <input type="text" class="form-control" id="recipient-name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone-number" class="col-form-label" >Telefon raqamingiz:</label>
-                                    <input type="text" class="form-control" id="phone-number" placeholder="+998" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button type="button" class="btn send">Ariza Qoldirish</button>
+            <p class="title">Hayotda yomon narsani korayapmanmi yoki hayotni negativ orqali korayapmanmi</p>
+            <p class="info">Academia 2021 yil tashkil qilingan va psixologiyaning Eng yetuk metodlaridan foydalangan holda
+                kuchli psixologlar birgalikda faoliyat olib boradi. Academiyaning asosiy maqsadi insonlarni hayotga
+                qaytarish. Hozirda akademiyaning 5000 dan ziyod mamnun mijozlari bor.</p>
+            <div class="download">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza
+                    qoldirish</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span
+                                        class="kurs">kursiga yoziling!</span></h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Ismingiz:</label>
+                                        <input type="text" class="form-control" id="recipient-name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
+                                        <input type="text" class="form-control" id="phone-number" placeholder="+998"
+                                            required>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
+                                <button type="button" class="btn send">Ariza Qoldirish</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-                </div>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" class="book-photo">
-            <img src="../assets//images/books.JPG" alt="">
+            <img src="/images/books.jpg" alt="">
         </div>
 
     </div>
@@ -54,44 +58,49 @@ onMounted(() => {
 <style scoped>
 .book-main {
     display: flex;
-   
-    padding:40px;
+
+    padding: 40px;
     justify-content: space-around;
-    
+
 }
 
 .book-info {
     width: 50%;
     padding: 40px;
 }
-.book-info h2{
- margin-left: 100px;
- font-size: 40px;
- font-weight: 200;
- color: rgb(79, 78, 78);
- line-height: 3rem;
+
+.book-info h2 {
+    margin-left: 100px;
+    font-size: 40px;
+    font-weight: 200;
+    color: rgb(79, 78, 78);
+    line-height: 3rem;
 }
-.book-info .title{
+
+.book-info .title {
     margin-left: 100px;
     font-size: 35px;
     font-family: 'Caveat', cursive;
     margin-top: 10px;
     color: rgb(231, 35, 94);
 }
-.book-info .info{
+
+.book-info .info {
     margin-left: 100px;
     margin-top: 40px;
     line-height: 40px;
     font-size: 18px;
     color: rgb(49, 48, 48);
 }
-.book-info .download{
+
+.book-info .download {
     margin-left: 100px;
     margin-top: 40px;
-    
-   
+
+
 }
-.download button{
+
+.download button {
     font-size: 18px;
     padding: 15px 40px 15px 40px;
     border-radius: 30px;
@@ -101,10 +110,12 @@ onMounted(() => {
     transition: .3s;
     cursor: pointer;
 }
-.download button:hover{
+
+.download button:hover {
     background-color: transparent;
-    color:rgb(231, 35, 94) ;
+    color: rgb(231, 35, 94);
 }
+
 .book-photo {
     width: 50%;
 }
@@ -114,142 +125,159 @@ onMounted(() => {
     margin-left: 40px;
     border-radius: 15px;
 }
-@media only screen and (max-width: 1000px){
+
+@media only screen and (max-width: 1000px) {
 
     .book-main {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    padding:0px;
-    
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px;
+
     }
-    
-.book-info {
-    width: 100%;
-   padding: 0px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-top: 40px;
-}
-.book-photo {
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   padding-top: 40px;
-}
-.book-photo img {
-    width: 70%;
-    align-self: center;
-}
-.book-info .download{
-    margin-left: -100px;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    
-}
-.download button{
-    margin: 40px;
-}
-.book-info h2{
- margin-left: 0px;
- font-size: 27px;
- width: 500px;
- font-weight: 200;
- color: rgb(79, 78, 78);
- line-height: 3rem;
-}
-.book-info .title{
-    margin-left: 0px;
-    font-size: 25px;
-    width: 500px;
-    font-family: 'Caveat', cursive;
-    margin-top: 10px;
-    color: rgb(231, 35, 94);
-}
-.book-info .info{
-    width: 500px;
-    margin-left: 0px;
-    margin-top: 40px;
-    line-height: 35px;
-    font-size: 15px;
-    color: rgb(49, 48, 48);
-}
-.download{
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-}
-}
-@media only screen and (max-width: 600px){
-    .book-main {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    padding:0px;
-    
-    
-}
-.book-info {
-    width: 100%;
-   padding: 0px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   margin-top: 40px;
-}
-.book-photo {
-   display: flex;
-   justify-content: center;
-   width: 100%;
-   padding-top: 40px;
-}
-.book-photo img {
-    width: 80%;
-    align-self: center;
-}
-.book-info .download{
-    margin-left: -100px;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    
-}
-.download button{
-    margin: 40px;
-}
-.book-info h2{
- margin-left: 0px;
- font-size: 27px;
- width: 300px;
- font-weight: 200;
- color: rgb(79, 78, 78);
- line-height: 3rem;
-}
-.book-info .title{
-    margin-left: 0px;
-    font-size: 25px;
-    width: 300px;
-    font-family: 'Caveat', cursive;
-    margin-top: 10px;
-    color: rgb(231, 35, 94);
-}
-.book-info .info{
-    width: 300px;
-    margin-left: 0px;
-    margin-top: 40px;
-    line-height: 35px;
-    font-size: 15px;
-    color: rgb(49, 48, 48);
-}
-.download{
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-}
+
+    .book-info {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .book-photo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .book-photo img {
+        width: 70%;
+        align-self: center;
+    }
+
+    .book-info .download {
+        margin-left: -100px;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .download button {
+        margin: 40px;
+    }
+
+    .book-info h2 {
+        margin-left: 0px;
+        font-size: 27px;
+        width: 500px;
+        font-weight: 200;
+        color: rgb(79, 78, 78);
+        line-height: 3rem;
+    }
+
+    .book-info .title {
+        margin-left: 0px;
+        font-size: 25px;
+        width: 500px;
+        font-family: 'Caveat', cursive;
+        margin-top: 10px;
+        color: rgb(231, 35, 94);
+    }
+
+    .book-info .info {
+        width: 500px;
+        margin-left: 0px;
+        margin-top: 40px;
+        line-height: 35px;
+        font-size: 15px;
+        color: rgb(49, 48, 48);
+    }
+
+    .download {
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
 }
 
-</style>
+@media only screen and (max-width: 600px) {
+    .book-main {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px;
+
+
+    }
+
+    .book-info {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .book-photo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 40px;
+    }
+
+    .book-photo img {
+        width: 80%;
+        align-self: center;
+    }
+
+    .book-info .download {
+        margin-left: -100px;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .download button {
+        margin: 40px;
+    }
+
+    .book-info h2 {
+        margin-left: 0px;
+        font-size: 27px;
+        width: 300px;
+        font-weight: 200;
+        color: rgb(79, 78, 78);
+        line-height: 3rem;
+    }
+
+    .book-info .title {
+        margin-left: 0px;
+        font-size: 25px;
+        width: 300px;
+        font-family: 'Caveat', cursive;
+        margin-top: 10px;
+        color: rgb(231, 35, 94);
+    }
+
+    .book-info .info {
+        width: 300px;
+        margin-left: 0px;
+        margin-top: 40px;
+        line-height: 35px;
+        font-size: 15px;
+        color: rgb(49, 48, 48);
+    }
+
+    .download {
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+    }
+}</style>

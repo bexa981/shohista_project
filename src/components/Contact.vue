@@ -27,7 +27,7 @@ onMounted(() => {
                     </a>
                 </div>
                 <div data-aos="flip-right" data-aos-duration="1500" class="phone">
-                    <img src="../assets/images/speech.webp" alt="">
+                    <img src="/images/speech.webp" alt="">
                     <h2>Aloqa uchun</h2>
                     <p class="info">Agar qandaydir savolaringiz bo'lsa <br> men buni eshitishdan hursand bo'lardim</p>
                     <a href="tel:123-456-7890">
@@ -127,7 +127,7 @@ onMounted(() => {
     width: 100%;
     height: 400px;
     background-color: aquamarine;
-    background-image: url('../assets/images/breadcrumbs_bg.jpg');
+    background-image: url('/images/breadcrumbs_bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,7 +165,7 @@ onMounted(() => {
     width: 100%;
     height: 400px;
     background-color: gray;
-    background-image: url('../assets/images/city.jpg');
+    background-image: url('/images/city.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -205,7 +205,7 @@ onMounted(() => {
     width: 45%;
     height: 800px;
     background-color: blanchedalmond;
-    background-image: url('../assets//images/bg-dark.jpg');
+    background-image: url('/images/bg-dark.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -11,28 +11,27 @@ onMounted(() => {
 
 const items = ref([{
     id: 1,
-    title: 'HOW To Get Shapes Of Your Dream',
-    info: 'I’ll teach you how to become slim and get the body of your dreams.',
+    title: 'Diagnostik qabul-sizning holatingiz chuqur taxlil qilinadi Va aynan qaysi nuqtalarda ishlanishi kerakligi aniqlanad',
+   
     animation: 'fade-right'
     
 },
 {
     id: 2,
-    title: 'Step-By-Step Training Guide',
-    info: 'With my new training guide you can exercise anytime and anywhere.',
+    title: 'Kvant taxlili seansi tashkil qilinadi-muammo yechiladi Va bu holat takrorlanmasligi uchun yangi neyron hosil qilinadi ',
+    
     animation: 'fade-left'
 },
 {
     id: 3,
-    title: 'Group Coaching',
-    info: 'You’re ready to explore a life that loves you as much as you love it through bi-weekly one on one coaching sessions.',
+    title: 'Adaptatsiya jarayoni- atrof muhit ôzgarishi ',
+    
     animation: 'fade-right'
 },
 {
     id: 4,
-    title: 'Group Coaching',
-    info: 'You’re ready to explore a life that loves you as much as you love it through bi-weekly one on one coaching sessions.',
-    animation: 'fade-left'
+    title: 'Gormoniya va energiyaga toyinish',
+   
 },
 
 ])
@@ -41,14 +40,14 @@ const items = ref([{
 <template>
     <div class="psychologic">
         <div class="profile-foto">
-            <img src="../assets/images/aboutme.png" alt="">
+            <img src="/images/aboutme.png" alt="">
         </div>
         <div class="programs">
             <div>
 
      
-            <h2 data-aos="zoom-out-down" data-aos-duration="1500">Diet Programs</h2>
-            <p data-aos="zoom-out-down" data-aos-duration="1500" class="fresh">Fresh Start Consultation</p>
+            <h2 data-aos="zoom-out-down" data-aos-duration="1500">Kvant taxlili seansi programmasi </h2>
+            <p data-aos="zoom-out-down" data-aos-duration="1500" class="fresh">Qanday bosqichlarni birgalikda bosib otamiz</p>
             <ul>
                 <li  v-for="item in items" :key="item.id" :data-aos="item.animation" data-aos-duration="1500">
                     <h4>{{item.title}}.</h4>
@@ -158,7 +157,7 @@ li{
     
 }
 li h4{
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 300;
     line-height: 1.2em;
     color: rgb(90, 90, 90);

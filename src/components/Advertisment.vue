@@ -10,8 +10,7 @@ onMounted(() => {
     <div class="advertisment">
         <h2 data-aos="fade-up" data-aos-duration="1500">Qayerdan boshlashni bilmayapsizmi?</h2>
         <p data-aos="fade-up" data-aos-duration="1500"> Start?
-            I’ve put together a two week quickstart guide to set you off on your journey, full of recipes, inspiration and
-            advice. <span>And it’s 100% FREE!</span> </p>
+            Hoziroq bizga qongiroq qiling Va aynan sizning holatingizni yaxshilashda Nima yordam berishini  <span>BEPUL bilib oling !</span> </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-aos="fade-up" data-aos-duration="1500">Joyni band qilish</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

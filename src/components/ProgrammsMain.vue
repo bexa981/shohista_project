@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import image from '../assets/images/apelsin.jpg'
+import image1 from '/images/kvant.jpg'
+import image2 from '/images/neyroset.jpg'
 
 import { onMounted } from "vue";
 import AOS from "aos";
@@ -18,17 +19,17 @@ const items = ref([{
 },
 {
     id: 2,
-    photo: 'https://cdn.xabardor.uz/filebrowser_media/quickupload_1665218423.jpg',
+    photo: image1,
     title: 'Fikrlashni òzgartir. Dunyo ozi òzgaradi',
     helpful: 'Neyronlar bizning shaxsiy hayotiy tajribamiz asosida shakllanadigan yo`llarga o`xshaydi',
     info: 'Neyron aloqalar ongimizda qanday qurilgan bo`lishidan qat`i nazar, biz ularni "haqiqat" sifatida qabul qilamiz. Inson esa dunyo aynan shunday ekaniga ishonib, o`z paradigma (andoza)sida yashaydi.Mening kvant taxlili seansim fikrlashning neyron darajasida, vaziyatga tashqi tomondan qarash va atrofingizdagi dunyoda yangi imkoniyatlarni ko`rish imkonini beradi'
 },
 {
     id: 3,
-    photo: 'https://sixieyyub.files.wordpress.com/2017/07/kvant.jpg?w=1200',
+    photo: image2,
     title: ' Kvant taxlili metodi  ',
     helpful: 'Metod kvant fizikasi va psixalogiya qonuniyatlariga asoslangan.',
-    info: 'Metod avtori psixoterapevt `Bert Xellinger` Ko`pchilik metodlar vaqtinchalik natija berib, mijozni og`riqli muammosini butunlay xal qilib bera olmaydi. Aynan Xellinger metodi ichida juda mashxur bo`lib, Germaniyada, Rossiyada shu metodni o`rgatuvchi va tadqiqot olib boruvchi ko`plab institutlar tashkil qilingan. '
+    info: 'Metod avtori psixoterapevt `Bert Xellinger` Ko`pchilik metodlar vaqtinchalik natija berib, mijozni og`riqli muammosini butunlay xal qilib bera olmaydi. Aynan Xellinger metodi ichida juda mashxur bo`lib, Germaniyada, Rossiyada shu metodni o`rgatuvchi va tadqiqot olib boruvchi ko`plab institutlar tashkil qilingan, Metod kvant fizikasi va psixalogiya qonuniyatlariga asoslangan.. '
 }
 ])
 
@@ -36,7 +37,7 @@ const items = ref([{
 
 <template>
     <div class="programs-main">
-        <h2 data-aos="fade-up" class="title">A Fresh Approach To Health & Life</h2>
+        <h2 data-aos="fade-up" class="title">Metodlarimiz haqida bilib oling</h2>
         <div class="cards">
             <div data-aos="fade-up" class="card" v-for="item in items" :key="item.id">
                 

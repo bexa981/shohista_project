@@ -19,7 +19,7 @@ onMounted(() => {
 
         <div class="social-main">
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="logo">
-                <img src="../assets/images/logo.png" alt="">
+                <img src="/images/logo.png" alt="">
 
             </div>
             <div class="links" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
@@ -39,16 +39,16 @@ onMounted(() => {
         </div>
 
         <div class="profile-foto">
-            <img class="profile1" src="../assets/images/profile-foto.png" alt="">
-            <img class="prifile2" src="../assets/images/profile-foto2.png" alt="">
+            <img class="profile1" src="/images/profile-foto.png" alt="">
+            <img class="prifile2" src="/images/profile-foto2.png" alt="">
 
         </div>
         <div class="job-title">
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayeva</p>
             <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Genetik kvanti <br>
                 tahlili yetuk <span>Mutahasisi</span>
             </h1>
-            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="with-name">Oliy
-                ma'lumotli vrach
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="with-name">Butun dunyo bôylan insonlarga g’alaba qozonishlari va omadga erishishlari uchun yordam beraman
             </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
                 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Ariza qoldirish</button>
@@ -181,13 +181,19 @@ onMounted(() => {
     position: absolute;
     right: 10%;
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .job-title h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
 }
-
+.job-title p{
+    
+    width: 50%;
+    }
 .job-title h1 span {
     font-family: 'Caveat', cursive;
 }
@@ -376,7 +382,7 @@ onMounted(() => {
 @media only screen and (max-width: 430px) {
     .job-title {
         position: absolute;
-        top: 14vh;
+        top: 30vh;
         right: 10px;
     }
 
@@ -389,4 +395,35 @@ onMounted(() => {
         font-size: 2rem;
 
     }
-}</style>
+    .profile-foto {
+      
+        top: 55vh;
+        left: 0rem;
+    }
+}
+@media only screen and (max-width: 1900px) {
+    .profile-foto {
+        position: absolute;
+        top: 15vh;
+        left: 2rem;
+    }
+}
+@media only screen and (max-width: 2800px) {
+    .profile-foto {
+        position: absolute;
+        top: 20vh;
+        left: 7rem;
+    }
+}
+
+@media only screen and (max-width: 705px) {
+    .profile-foto img{
+        width: 80%;
+    }
+    .profile-foto {
+        top: 50vh;
+        left: 0em;
+    }
+}
+
+</style>

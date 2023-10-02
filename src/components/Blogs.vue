@@ -17,7 +17,7 @@ onMounted(() => {
 
          <div data-aos="fade-right" data-aos-duration="1500" class="left-video">
             <div class="player-container">
-               <vue3-video-player @play="your_method" src="../assets/video/img-5395_D5UFuySx (1).mp4"
+               <vue3-video-player @play="your_method" src=""
                   ></vue3-video-player>
             </div>
          </div>
@@ -100,7 +100,7 @@ onMounted(() => {
    width: 550px;
    height: 520px;
    background-color: gray;
-   background-image: url(../assets/images/apelsin.jpg);
+   background-image: url(/images/apelsin.jpg);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -126,7 +126,7 @@ onMounted(() => {
    width: 300px;
    height: 250px;
    background-color: gray;
-   background-image: url(../assets/images/apelsin.jpg);
+   background-image: url(/images/apelsin.jpg);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
