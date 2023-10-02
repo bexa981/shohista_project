@@ -1,0 +1,217 @@
+<script setup>
+import { ref } from "vue";
+
+import { onMounted } from "vue";
+import AOS from "aos";
+
+onMounted(() => {
+    AOS.init();
+})
+
+
+const items = ref([{
+    id: 1,
+    title: 'HOW To Get Shapes Of Your Dream',
+    info: 'I’ll teach you how to become slim and get the body of your dreams.',
+    animation: 'fade-right'
+    
+},
+{
+    id: 2,
+    title: 'Step-By-Step Training Guide',
+    info: 'With my new training guide you can exercise anytime and anywhere.',
+    animation: 'fade-left'
+},
+{
+    id: 3,
+    title: 'Group Coaching',
+    info: 'You’re ready to explore a life that loves you as much as you love it through bi-weekly one on one coaching sessions.',
+    animation: 'fade-right'
+},
+{
+    id: 4,
+    title: 'Group Coaching',
+    info: 'You’re ready to explore a life that loves you as much as you love it through bi-weekly one on one coaching sessions.',
+    animation: 'fade-left'
+},
+
+])
+</script>
+
+<template>
+    <div class="psychologic">
+        <div class="profile-foto">
+            <img src="../assets/images/aboutme.png" alt="">
+        </div>
+        <div class="programs">
+            <div>
+
+     
+            <h2 data-aos="zoom-out-down" data-aos-duration="1500">Diet Programs</h2>
+            <p data-aos="zoom-out-down" data-aos-duration="1500" class="fresh">Fresh Start Consultation</p>
+            <ul>
+                <li  v-for="item in items" :key="item.id" :data-aos="item.animation" data-aos-duration="1500">
+                    <h4>{{item.title}}.</h4>
+                    <p>{{item.info}}</p>
+                </li>
+            </ul>
+         <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Kursga yozilish</button>
+         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga yoziling!</span></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Ismingiz:</label>
+                                    <input type="text" class="form-control" id="recipient-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone-number" class="col-form-label" >Telefon raqamingiz:</label>
+                                    <input type="text" class="form-control" id="phone-number" placeholder="+998" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
+                            <button type="button" class="btn send">Ariza Qoldirish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</template>
+
+<style scoped>
+.psychologic{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-foto{
+    width: 50%;
+    background-color: #e6e5ea;
+}
+.profile-foto img{
+    width: 100%;
+}
+.programs{
+    width: 50%;
+    background-color: #f9f9f9;
+    padding-top: 100px;
+   display: flex;
+   justify-content: center;
+}
+.programs div{
+    width: 550px;
+}
+.programs h2{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.programs .fresh{
+    font-family: 'Caveat', cursive;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: rgb(231, 35, 94);
+}
+.programs button{
+    padding: 20px 40px 20px 40px;
+    border-radius: 30px;
+    background-color:  rgb(231, 35, 94);
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 40px;
+    border: 3px solid rgb(231, 35, 94);
+    transition: .3s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.programs button:hover{
+  color:rgb(231, 35, 94) ;
+  background-color: transparent;
+}
+ul{
+    position: relative;
+    padding-left: 4.65em;
+    list-style-type: none;
+}
+ul::before{
+    border: 1px dashed #ddd;
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    height: 100%;
+}
+li{
+    position: relative;
+    margin-top: 40px;
+    font-weight: 300;
+    
+}
+li h4{
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.2em;
+    color: rgb(90, 90, 90);
+}
+li p{
+    margin-top: 20px;
+}
+li::before{
+ content: '+';
+ color: #fff;
+ font-size:1.8em;
+ font-weight: 100;
+ left: -2.95em;
+ top: -0.1em;
+ width: 1.4em;
+ height: 1.4em;
+ background: rgb(231, 35, 94);
+ border-radius: 50%;
+ text-align: center;
+ position: absolute;
+ display: inline-block;
+ 
+}
+@media only screen and (max-width: 600px){
+    .psychologic{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-foto{
+        width: 100%;
+    }
+    .programs{
+        width: 100%;
+        padding-top: 30px;
+        
+    }
+    ul{
+    margin-left: 20px;
+    }
+    .programs button{
+         
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .programs h2{
+        text-align: center;
+    }
+    .programs .fresh{
+        text-align: center;
+    }
+    li{
+        padding: 5px;
+    }
+
+}
+</style>
