@@ -8,8 +8,8 @@ onMounted(() => {
 </script>
 <template>
    <div class="blog-main">
-      <h2 data-aos="fade-up" data-aos-duration="1500">Awesome Articles</h2>
-      <p data-aos="fade-up" data-aos-duration="1500" class="title">Your Healthy Lifestyle Blog</p>
+      <h2 data-aos="fade-up" data-aos-duration="1500">Foydali videolar</h2>
+      <p data-aos="fade-up" data-aos-duration="1500" class="title">Hayot tarzingizni yaxshi tomonga o'zgartiring</p>
 
 
 
@@ -17,7 +17,7 @@ onMounted(() => {
 
          <div data-aos="fade-right" data-aos-duration="1500" class="left-video">
             <div class="player-container">
-               <vue3-video-player @play="your_method" src=""
+               <vue3-video-player @play="your_method" src="/videos/video11.mp4"
                   ></vue3-video-player>
             </div>
          </div>
@@ -27,13 +27,13 @@ onMounted(() => {
             <div data-aos="fade-left" data-aos-duration="1500" class="right-one">
                <div class="video1 video">
                   <div class="player-container">
-               <vue3-video-player @play="your_method" src="https://youtu.be/x2rv7RBogaM"
+               <vue3-video-player @play="your_method" src="/videos/video8.mp4"
                   :view-core="viewCore"></vue3-video-player>
             </div>
                </div>
                <div class="video2 video">
                   <div class="player-container">
-               <vue3-video-player @play="your_method" src="https://youtu.be/x2rv7RBogaM"
+               <vue3-video-player @play="your_method" src="/videos/video7.mp4"
                   :view-core="viewCore"></vue3-video-player>
             </div>
                </div>
@@ -41,12 +41,12 @@ onMounted(() => {
             <div data-aos="fade-left" data-aos-duration="1500" class="right-one">
                <div class="video3 video">
                   <div class="player-container">
-               <vue3-video-player @play="your_method" src="https://youtu.be/x2rv7RBogaM"
+               <vue3-video-player @play="your_method" src="/videos/video6.mp4"
                   :view-core="viewCore"></vue3-video-player>
             </div>
                </div>
                <div class="video4 video"> <div class="player-container">
-               <vue3-video-player @play="your_method" src="https://youtu.be/x2rv7RBogaM"
+               <vue3-video-player @play="your_method" src="/videos/video5.mp4"
                   :view-core="viewCore"></vue3-video-player>
             </div></div>
             </div>

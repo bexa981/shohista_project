@@ -4,14 +4,15 @@ import Youtube from './icons/Youtube.vue';
 import Instagram from './icons/Instagram.vue';
 import Telegram from './icons/Telegram.vue';
 import Facebook from './icons/Facebook.vue';
-
-
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import AOS from "aos";
+
+
 
 onMounted(() => {
     AOS.init();
 })
+
 
 </script>
 <template>
@@ -23,16 +24,16 @@ onMounted(() => {
 
             </div>
             <div class="links" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
-                <a href="#">
+                <a href="https://www.youtube.com/@djurabayeva_shohistabonu">
                     <Youtube class="social youtube" />
                 </a>
                 <a href="#">
                     <Facebook class="social facebook" />
                 </a>
-                <a href="#">
+                <a href="https://t.me/energywomensacademy">
                     <Telegram class="social telegram" />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/ekspert_shohistabonu/">
                     <Instagram class="social instagram" />
                 </a>
             </div>
@@ -48,51 +49,59 @@ onMounted(() => {
             <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Genetik kvanti <br>
                 tahlili yetuk <span>Mutahasisi</span>
             </h1>
-            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="with-name">Butun dunyo bôylan insonlarga g’alaba qozonishlari va omadga erishishlari uchun yordam beraman
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="with-name">Butun
+                dunyo bôylan insonlarga g’alaba qozonishlari va omadga erishishlari uchun yordam beraman
             </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
                 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Ariza qoldirish</button>
 
-           
+
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga yoziling!</span></h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                    <input type="text" class="form-control" id="recipient-name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone-number" class="col-form-label" >Telefon raqamingiz:</label>
-                                    <input type="text" class="form-control" id="phone-number" placeholder="+998" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button type="button" class="btn send">Ariza Qoldirish</button>
-                        </div>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga
+                                yoziling!</span></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                        <form  >
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Ismingiz:</label>
+                                <input name="name" type="text" class="form-control" id="recipient-name"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
+                                <input name="phone" type="text" class="form-control" id="phone-number"
+                                     placeholder="+998" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
+                                <button value="Send" type="submit" class="btn send">Ariza Qoldirish</button>
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
-.modal-footer .send{
- background-color: rgb(231, 35, 94)!important;
- color: white;
+.modal-footer .send {
+    background-color: rgb(231, 35, 94) !important;
+    color: white;
 }
-.modal-footer .close{
+
+.modal-footer .close {
     background-color: #fff;
+    color: rgb(231, 35, 94);
     border: 3px solid rgb(231, 35, 94);
 }
+
 .main {
     background-image: url('https://www.10wallpaper.com/wallpaper/1920x1080/1604/Lines_red_background_bright-Design_Theme_HD_Wallpapers_1920x1080.jpg');
     background-repeat: no-repeat;
@@ -190,18 +199,22 @@ onMounted(() => {
     font-size: 50px;
     font-weight: bold;
 }
-.job-title p{
-    
+
+.job-title p {
+
     width: 50%;
-    }
+}
+
 .job-title h1 span {
     font-family: 'Caveat', cursive;
 }
-.kurs{
+
+.kurs {
     font-family: 'Caveat', cursive;
     font-size: 30px;
     color: rgb(231, 35, 94);
 }
+
 .job-title button {
     padding: 20px 40px 20px 40px;
     color: rgb(231, 35, 94);
@@ -242,8 +255,12 @@ onMounted(() => {
         left: -3rem;
     }
 
-    .prifile2 {
+    .profile1 {
         display: block;
+    }
+
+    .prifile2 {
+        display: none;
     }
 
     .profile-foto img {
@@ -279,9 +296,6 @@ onMounted(() => {
         transition: .3s;
     }
 
-    .profile1 {
-        display: none;
-    }
 
     .links {
         display: flex;
@@ -320,13 +334,13 @@ onMounted(() => {
 
     }
 
-    .profile-foto {
-        position: absolute;
-        top: 27vh;
-        left: -3rem;
-    }
+
 
     .prifile2 {
+        display: none;
+    }
+
+    .profile1 {
         display: block;
     }
 
@@ -362,9 +376,7 @@ onMounted(() => {
         transition: .3s;
     }
 
-    .profile1 {
-        display: none;
-    }
+
 
     .links {
         display: flex;
@@ -382,8 +394,12 @@ onMounted(() => {
 @media only screen and (max-width: 430px) {
     .job-title {
         position: absolute;
-        top: 30vh;
+        top: 20vh;
         right: 10px;
+    }
+
+    .links {
+        top: 25vh;
     }
 
     .logo h2 {
@@ -395,12 +411,17 @@ onMounted(() => {
         font-size: 2rem;
 
     }
+
     .profile-foto {
-      
-        top: 55vh;
-        left: 0rem;
+        position: absolute;
+        top: 64vh !important;
+    }
+
+    .profile-foto img {
+        width: 300px !important;
     }
 }
+
 @media only screen and (max-width: 1900px) {
     .profile-foto {
         position: absolute;
@@ -408,6 +429,7 @@ onMounted(() => {
         left: 2rem;
     }
 }
+
 @media only screen and (max-width: 2800px) {
     .profile-foto {
         position: absolute;
@@ -417,13 +439,12 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 705px) {
-    .profile-foto img{
+    .profile-foto img {
         width: 80%;
     }
+
     .profile-foto {
         top: 50vh;
         left: 0em;
     }
-}
-
-</style>
+}</style>

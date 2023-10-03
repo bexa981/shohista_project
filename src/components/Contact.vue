@@ -2,6 +2,7 @@
 import Youtube from './icons/Youtube.vue';
 import Instagram from './icons/Instagram.vue';
 import Telegram from './icons/Telegram.vue';
+
 import { onMounted } from "vue";
 import AOS from "aos";
 
@@ -16,13 +17,13 @@ onMounted(() => {
 
             <div class="links-contact">
                 <div data-aos="flip-right" data-aos-duration="1500" class="links">
-                    <a href="#" title="yotube">
+                    <a href="https://www.youtube.com/@djurabayeva_shohistabonu" title="yotube">
                         <Youtube class="logo logo1" />
                     </a>
-                    <a href="#" title="instagram">
+                    <a href="https://www.instagram.com/ekspert_shohistabonu/" title="instagram">
                         <Instagram class="logo logo2" />
                     </a>
-                    <a href="#" title="telegram">
+                    <a href="https://t.me/energywomensacademy" title="telegram">
                         <Telegram class="logo logo3" />
                     </a>
                 </div>
@@ -30,8 +31,11 @@ onMounted(() => {
                     <img src="/images/speech.webp" alt="">
                     <h2>Aloqa uchun</h2>
                     <p class="info">Agar qandaydir savolaringiz bo'lsa <br> men buni eshitishdan hursand bo'lardim</p>
-                    <a href="tel:123-456-7890">
-                        <p class="phone-number">+1 78 123 5461</p>
+                    <a href="tel:+998970177372">
+                        <p class="phone-number">+998 97 017 73 72</p>
+                    </a>
+                    <a href="tel:+998970177372">
+                        <p class="phone-number">+998 97 017 73 72</p>
                     </a>
                 </div>
             </div>
@@ -85,7 +89,7 @@ onMounted(() => {
                     </div>
                     <textarea data-aos="fade-up" data-aos-duration="1500" name="" id="" cols="40" rows="6"
                         placeholder="Xabar..."></textarea>
-                    <button data-aos="fade-up" data-aos-duration="1500">Xabar jo'natish</button>
+                    <button >Xabar jo'natish</button>
                 </form>
             </div>
         </div>
@@ -177,23 +181,23 @@ onMounted(() => {
 }
 
 .phone img {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 70px;
 }
 
 .phone h2 {
     font-weight: 300;
-    font-size: 37px;
-    margin-top: 40px;
+    font-size: 35px;
+    margin-top: 30px;
 }
 
 .phone .info {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .phone .phone-number {
-    font-size: 27px;
+    font-size: 23px;
 }
 
 .phone a {

@@ -12,11 +12,9 @@ onMounted(() => {
 <template>
     <div class="members">
         <div data-aos="fade-right" data-aos-duration="1500" class="memebers-info">
-            <h2>Our Members' <br> Achievements</h2>
-            <p class="title">Lillie Watson lost 90 pounds</p>
-            <p class="info">“Melanie will completely transform your mindset towards food and your relationship with your body. I’m now
-                kinder to myself and am happier, not just because I lost weight, but because I learned to appreciate and
-                take care of myself.”</p>
+            <h2>Bizning mijozimiz erishgan natijalari</h2>
+            <p class="title">Mijozimizning keltirilgan so'zlari</p>
+            <p class="info">“Holatim ancha yaxshi qaysiki bo'ladigan munosabatlar va moliyaviy, tinchlik, hotirjamlik topishda anchagina yaxshilanganligini o'zimda sezdim.Bugungi kunda bu kurslar menga anchagina yordam bermoqda. Xar bir erkak kishida bolganidek mendaham moliyaviy va munosabatga oid muamolar bo'lgan va bularni yengib ketishimda bu kurslar ancha yordam berdi.”</p>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza qoldirish</button>
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -46,8 +44,10 @@ onMounted(() => {
             </div>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" class="member-video">
-            <iframe width="100%" height="470" src="https://www.youtube.com/embed/hrqH4tGqpXI" title="ERIM O&#39;Z MASULYATINI BO&#39;YNIGA OLSIN YOKI AJRASHSIN!!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
+            <div class="player-container">
+               <vue3-video-player @play="your_method" src="/videos/klent2info.mp4"
+                  ></vue3-video-player>
+            </div>
              
         </div>
     </div>
@@ -72,6 +72,10 @@ onMounted(() => {
 }
 .member-video{
     width: 600px;
+    height: 50vh;
+}
+.player-container{
+    height: 100%;
 }
 .memebers-info h2{
     font-size: 40px;
