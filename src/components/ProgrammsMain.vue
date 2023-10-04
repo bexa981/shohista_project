@@ -82,7 +82,7 @@ const items = ref([{
 }
 
 .card {
-    width: 450px;
+    width: 400px;
     background-color:#fff;
     border-radius: 10px;
     text-align: center;

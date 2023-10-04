@@ -2,60 +2,46 @@
 import Youtube from './icons/Youtube.vue';
 import Instagram from './icons/Instagram.vue';
 import Telegram from './icons/Telegram.vue';
-import { ref } from 'vue'
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import AOS from "aos";
 import Emailjs from './Emailjs.vue';
-import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
+import emailjs from 'emailjs-com';
+
 onMounted(() => {
     AOS.init();
 })
-let name = ref('')
-let phone = ref('')
-let message = ref('')
-let form = ref('null')
 
-function sendEmail2(event) {
-    event.preventDefault();
+const form = ref(null);
+const inputFieldReset = ref('');
+
+const sendMail2 = () => {
     emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
-        .then((result) => {
-            console.log(result+`good`);;
+        .then(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Jo`natildi',
+                text: 'Xabaringiz jo`natildi',
+
+            })
+            inputFieldReset.value = " ";
         }, (error) => {
-            console.log(error+`error`);
+            Swal.fire({
+                icon: 'error',
+                title: 'Xato..',
+                text: 'Xabar jo`natishda xatolik bor! ' + error,
+
+            });
         });
-}
-function success() {
-    // Use sweetalert2
-    Swal.fire({
-        icon: 'success',
-        title: 'Jo`natildi',
-        text: 'Xabaringiz jo`natildi',
 
-    })
-}
-
-function error() {
-    // Use sweetalert2
-    Swal.fire({
-        icon: 'error',
-        title: 'Xato..',
-        text: 'Maydoni bo`sh qoldirmang!',
-
-    })
-}
-function handleSuccess2() {
-    if (name.value && phone.value && message.value) {
-        console.log(message.value);
-        success();
-        name.value = ''
-        phone.value = ''
-        message.value = ''
-    }
-    else {
-        error()
+    return {
+        form,
+        inputFieldReset,
+        sendMail2
     }
 }
+
+
 </script>
 
 <template>
@@ -102,14 +88,14 @@ function handleSuccess2() {
                 va maqsadlaringizni muhokama qilish uchun BEPUL boshlang'ich rejalar tuzishimiz mumkin
             </p>
             <div class="forms">
-                <form ref="form" @submit.prevent="sendEmail2">
+                <form class="form" ref="form" @submit.prevent="sendMail2">
                     <div class="inputs" data-aos="fade-up" data-aos-duration="1500">
-                        <input name="name" v-model="name" class="name" type="text" placeholder="Ism" required>
-                        <input name="phone" v-model="phone" class="name" type="number" placeholder="+998" required>
+                        <input name="name" class="name" type="text" placeholder="Ism" :value="inputFieldReset" required>
+                        <input name="phone" class="name" type="text" placeholder="+998" :value="inputFieldReset" required>
                     </div>
-                    <textarea name="message" v-model="message" data-aos="fade-up" required data-aos-duration="1500" id="" cols="40" rows="6"
-                        placeholder="Xabar..."></textarea>
-                    <button @click="handleSuccess2">Xabar jo'natish</button>
+                    <textarea name="message" data-aos="fade-up" required data-aos-duration="1500" :value="inputFieldReset"
+                        id="" cols="40" rows="6" placeholder="Xabar..."></textarea>
+                    <button name="send" type="submit">Xabar jo'natish</button>
                 </form>
             </div>
         </div>

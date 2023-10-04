@@ -1,60 +1,88 @@
-<script >
-import emailjs from '@emailjs/browser';
- 
+<script>
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import emailjs from 'emailjs-com';
+import {ref} from 'vue';
 
 export default {
-    data(){
-   return{
-    name: '',
-    phone:'',
-    
-   }
-    },
-   
-    methods: {
-        sendEmail(event) {
-            event.preventDefault();
-            emailjs.sendForm('service_abqzihs', 'template_263nu0d', this.$refs.form, '5GcDMwXMSQshjU1YE')
-                .then((result) => {
-                    success(result);
-                }, (error) => {
-                    error(error.text) 
-                });
-        },
-        success() {
-      // Use sweetalert2
-      this.$swal.fire({
-  icon: 'success',
-  title: 'Jo`natildi',
-  text: 'Xabaringiz jo`natildi',
-  
-})
-    },
-    error() {
-      // Use sweetalert2
-      this.$swal.fire({
-  icon: 'error',
-  title: 'Xato..',
-  text: 'Maydoni bo`sh qoldirmang!',
-  
-})
-    },
-    handleSuccess(){
-        if(this.name && this.phone){
-            
-            this.success();
-            this.name=''
-            this.phone='' 
-            
-        }
-        else{
-            this.error()
-        }
-    }
-    
+ setup() {
+    const form = ref(null);
+    const inputFieldReset = ref(null);
 
-}
-}
+    const sendMail = () => {
+        emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
+        .then(() => {
+            Swal.fire({
+        icon: 'success',
+        title: 'Jo`natildi',
+        text: 'Xabaringiz jo`natildi',
+
+    })
+          inputFieldReset.value = " ";
+        }, (error) => {
+            Swal.fire({
+        icon: 'error',
+        title: 'Xato..',
+        text: 'Xabar jo`natishda xatolik bor! '+error,
+
+    });
+        }); 
+      }
+      return{
+    form,
+    inputFieldReset,
+    sendMail
+  }
+    }
+
+
+ }
+
+
+
+// let name = ref('')
+// let phone = ref('')
+// const form = ref(null)
+
+// function sendEmail(event) {
+//     event.preventDefault();
+//     emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
+//         .then((result) => {
+//             console.log(result+`good`);;
+//         }, (error) => {
+//             console.log(error+`error`);
+//         });
+// }
+// function success() {
+//     // Use sweetalert2
+//     Swal.fire({
+//         icon: 'success',
+//         title: 'Jo`natildi',
+//         text: 'Xabaringiz jo`natildi',
+
+//     })
+// }
+
+// function error() {
+//     // Use sweetalert2
+//     Swal.fire({
+//         icon: 'error',
+//         title: 'Xato..',
+//         text: 'Maydoni bo`sh qoldirmang!',
+
+//     })
+// }
+// function handleSuccess() {
+//     if (name.value && phone.value ) {
+        
+//         success();
+//         name.value = ''
+//         phone.value = ''
+    
+//     }
+//     else {
+//         error()
+//     }
+// }
 
 
 </script>
@@ -69,19 +97,19 @@ export default {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="form" ref="form" @submit.prevent="sendEmail">
+                    <form class="form" ref="form" @submit.prevent="sendMail">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                            <input name="name" v-model="name" type="text" class="form-control" id="recipient-name" required>
+                            <input name="name"  type="text" class="form-control" id="recipient-name" :value="inputFieldReset" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
-                            <input name="phone" v-model="phone" type="text" class="form-control" id="phone-number" placeholder="+998"
+                            <input name="phone"  type="text" class="form-control" id="phone-number" :value="inputFieldReset" placeholder="+998"
                                 required>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button @click="handleSuccess" data-bs-toggle="modal"  data-bs-target="#exampleModal" type="submit"
+                            <button name="send" data-bs-toggle="modal"   data-bs-target="#exampleModal" type="submit"
                                 class="btn send">Ariza Qoldirish</button>
                         </div>
                     </form>
