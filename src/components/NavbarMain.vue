@@ -27,13 +27,13 @@ onMounted(() => {
                 <a href="https://www.youtube.com/@djurabayeva_shohistabonu">
                     <Youtube class="social youtube" />
                 </a>
-                <a href="#">
+                <a target="_blank" href="#">
                     <Facebook class="social facebook" />
                 </a>
-                <a href="https://t.me/energywomensacademy">
+                <a target="_blank" href="https://t.me/energywomensacademy">
                     <Telegram class="social telegram" />
                 </a>
-                <a href="https://www.instagram.com/ekspert_shohistabonu/">
+                <a target="_blank" href="https://www.instagram.com/ekspert_shohistabonu/">
                     <Instagram class="social instagram" />
                 </a>
             </div>
@@ -45,7 +45,7 @@ onMounted(() => {
 
         </div>
         <div class="job-title">
-            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayevaa</p>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayeva</p>
             <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Genetik kvanti <br>
                 tahlili yetuk <span>Mutahasisi</span>
             </h1>

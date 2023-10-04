@@ -51,13 +51,13 @@ const sendMail2 = () => {
 
             <div class="links-contact">
                 <div data-aos="flip-right" data-aos-duration="1500" class="links">
-                    <a href="https://www.youtube.com/@djurabayeva_shohistabonu" title="yotube">
+                    <a href="https://www.youtube.com/@djurabayeva_shohistabonu" target="_blank" title="yotube">
                         <Youtube class="logo logo1" />
                     </a>
-                    <a href="https://www.instagram.com/ekspert_shohistabonu/" title="instagram">
+                    <a href="https://www.instagram.com/ekspert_shohistabonu/" target="_blank" title="instagram">
                         <Instagram class="logo logo2" />
                     </a>
-                    <a href="https://t.me/energywomensacademy" title="telegram">
+                    <a href="https://t.me/energywomensacademy" target="_blank" title="telegram">
                         <Telegram class="logo logo3" />
                     </a>
                 </div>
