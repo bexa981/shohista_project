@@ -1,10 +1,66 @@
-<script setup>
+<script >
+import emailjs from '@emailjs/browser';
+ 
+
+export default {
+    data(){
+   return{
+    name: '',
+    phone:'',
+    
+   }
+    },
+   
+    methods: {
+        sendEmail(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_abqzihs', 'template_263nu0d', this.$refs.form, '5GcDMwXMSQshjU1YE')
+                .then((result) => {
+                    success(result);
+                }, (error) => {
+                    error(error.text) 
+                });
+        },
+        success() {
+      // Use sweetalert2
+      this.$swal.fire({
+  icon: 'success',
+  title: 'Jo`natildi',
+  text: 'Xabaringiz jo`natildi',
+  
+})
+    },
+    error() {
+      // Use sweetalert2
+      this.$swal.fire({
+  icon: 'error',
+  title: 'Xato..',
+  text: 'Maydoni bo`sh qoldirmang!',
+  
+})
+    },
+    handleSuccess(){
+        if(this.name && this.phone){
+            
+            this.success();
+            this.name=''
+            this.phone='' 
+            
+        }
+        else{
+            this.error()
+        }
+    }
+    
+
+}
+}
 
 
 </script>
 
 <template>
-    <div class="modal fade">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" validate>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -13,19 +69,20 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form class="form" ref="form" @submit.prevent="sendMail">
+                    <form class="form" ref="form" @submit.prevent="sendEmail">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                            <input type="text" class="form-control" id="recipient-name" :value="inputFieldReset" required>
+                            <input name="name" v-model="name" type="text" class="form-control" id="recipient-name" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
-                            <input type="text" class="form-control" id="phone-number" placeholder="+998"
-                                :value="inputFieldReset" required>
+                            <input name="phone" v-model="phone" type="text" class="form-control" id="phone-number" placeholder="+998"
+                                required>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button type="button" class="btn send">Ariza Qoldirish</button>
+                            <button @click="handleSuccess" data-bs-toggle="modal"  data-bs-target="#exampleModal" type="submit"
+                                class="btn send">Ariza Qoldirish</button>
                         </div>
                     </form>
                 </div>

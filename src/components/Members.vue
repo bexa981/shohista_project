@@ -1,5 +1,5 @@
 <script setup>
-
+import Emailjs from './Emailjs.vue';
 import { onMounted } from "vue";
 import AOS from "aos";
 
@@ -16,32 +16,7 @@ onMounted(() => {
             <p class="title">Mijozimizning keltirilgan so'zlari</p>
             <p class="info">“Holatim ancha yaxshi qaysiki bo'ladigan munosabatlar va moliyaviy, tinchlik, hotirjamlik topishda anchagina yaxshilanganligini o'zimda sezdim.Bugungi kunda bu kurslar menga anchagina yordam bermoqda. Xar bir erkak kishida bolganidek mendaham moliyaviy va munosabatga oid muamolar bo'lgan va bularni yengib ketishimda bu kurslar ancha yordam berdi.”</p>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza qoldirish</button>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga yoziling!</span></h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                    <input type="text" class="form-control" id="recipient-name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone-number" class="col-form-label" >Telefon raqamingiz:</label>
-                                    <input type="text" class="form-control" id="phone-number" placeholder="+998" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button type="button" class="btn send">Ariza Qoldirish</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+             <Emailjs/>
         </div>
         <div data-aos="fade-left" data-aos-duration="1500" class="member-video">
             <div class="player-container">
@@ -56,7 +31,6 @@ onMounted(() => {
 <style scoped>
 .members{
     width: 100%;
-    
     background-image: url('https://www.10wallpaper.com/wallpaper/1920x1080/1604/Lines_red_background_bright-Design_Theme_HD_Wallpapers_1920x1080.jpg');
     background-size: cover;
     background-position: center;

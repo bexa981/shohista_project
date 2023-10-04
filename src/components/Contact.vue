@@ -2,14 +2,62 @@
 import Youtube from './icons/Youtube.vue';
 import Instagram from './icons/Instagram.vue';
 import Telegram from './icons/Telegram.vue';
-
+import { ref } from 'vue'
 import { onMounted } from "vue";
 import AOS from "aos";
-
+import Emailjs from './Emailjs.vue';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 onMounted(() => {
     AOS.init();
 })
+let name = ref('')
+let phone = ref('')
+let message = ref('')
+let form = ref('null')
+
+function sendEmail2(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
+        .then((result) => {
+            console.log(result+`good`);;
+        }, (error) => {
+            console.log(error+`error`);
+        });
+}
+function success() {
+    // Use sweetalert2
+    Swal.fire({
+        icon: 'success',
+        title: 'Jo`natildi',
+        text: 'Xabaringiz jo`natildi',
+
+    })
+}
+
+function error() {
+    // Use sweetalert2
+    Swal.fire({
+        icon: 'error',
+        title: 'Xato..',
+        text: 'Maydoni bo`sh qoldirmang!',
+
+    })
+}
+function handleSuccess2() {
+    if (name.value && phone.value && message.value) {
+        console.log(message.value);
+        success();
+        name.value = ''
+        phone.value = ''
+        message.value = ''
+    }
+    else {
+        error()
+    }
+}
 </script>
+
 <template>
     <div class="contact-main">
         <div class="contacts">
@@ -45,35 +93,7 @@ onMounted(() => {
                 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     data-bs-whatever="@mdo">Bog'lanish</button>
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span
-                                        class="kurs">kursiga yoziling!</span></h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                        <input type="text" class="form-control" id="recipient-name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
-                                        <input type="text" class="form-control" id="phone-number" placeholder="+998"
-                                            required>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                                <button type="button" class="btn send">Ariza Qoldirish</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Emailjs />
             </div>
         </div>
         <div class="message">
@@ -82,14 +102,14 @@ onMounted(() => {
                 va maqsadlaringizni muhokama qilish uchun BEPUL boshlang'ich rejalar tuzishimiz mumkin
             </p>
             <div class="forms">
-                <form>
+                <form ref="form" @submit.prevent="sendEmail2">
                     <div class="inputs" data-aos="fade-up" data-aos-duration="1500">
-                        <input class="name" type="text" placeholder="Ism">
-                        <input class="name" type="number" placeholder="+998">
+                        <input name="name" v-model="name" class="name" type="text" placeholder="Ism" required>
+                        <input name="phone" v-model="phone" class="name" type="number" placeholder="+998" required>
                     </div>
-                    <textarea data-aos="fade-up" data-aos-duration="1500" name="" id="" cols="40" rows="6"
+                    <textarea name="message" v-model="message" data-aos="fade-up" required data-aos-duration="1500" id="" cols="40" rows="6"
                         placeholder="Xabar..."></textarea>
-                    <button >Xabar jo'natish</button>
+                    <button @click="handleSuccess2">Xabar jo'natish</button>
                 </form>
             </div>
         </div>
@@ -459,4 +479,5 @@ form button:hover {
     .message textarea {
         width: 80%;
     }
-}</style>
+}
+</style>

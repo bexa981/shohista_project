@@ -6,7 +6,7 @@ import Telegram from './icons/Telegram.vue';
 import Facebook from './icons/Facebook.vue';
 import { onMounted, ref } from "vue";
 import AOS from "aos";
-
+import Emailjs from './Emailjs.vue';
 
 
 onMounted(() => {
@@ -20,7 +20,7 @@ onMounted(() => {
 
         <div class="social-main">
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="logo">
-                <img src="/images/logo.png" alt="">
+                <img src="/images/logo.png" alt="logo">
 
             </div>
             <div class="links" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">
@@ -40,8 +40,8 @@ onMounted(() => {
         </div>
 
         <div class="profile-foto">
-            <img class="profile1" src="/images/profile-foto.png" alt="">
-            <img class="prifile2" src="/images/profile-foto2.png" alt="">
+            <img class="profile1" src="/images/profile-foto.png" alt="profile-foto">
+           
 
         </div>
         <div class="job-title">
@@ -54,39 +54,8 @@ onMounted(() => {
             </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
                 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Ariza qoldirish</button>
-
-
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga
-                                yoziling!</span></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form  >
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                <input name="name" type="text" class="form-control" id="recipient-name"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
-                                <input name="phone" type="text" class="form-control" id="phone-number"
-                                     placeholder="+998" required>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                                <button value="Send" type="submit" class="btn send">Ariza Qoldirish</button>
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        <Emailjs/>        
     </div>
 </template>
 

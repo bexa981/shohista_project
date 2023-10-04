@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import image1 from '/images/kvant.jpg'
 import image2 from '/images/neyroset.jpg'
-
+import Emailjs from './Emailjs.vue';
 import { onMounted } from "vue";
 import AOS from "aos";
 
@@ -48,32 +48,7 @@ const items = ref([{
                 <p class="info">{{ item.info }}</p>
                 <button  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza qoldirish</button>
                 </div>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Shohista Djurabayeva <span class="kurs">kursiga yoziling!</span></h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Ismingiz:</label>
-                                    <input type="text" class="form-control" id="recipient-name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone-number" class="col-form-label" >Telefon raqamingiz:</label>
-                                    <input type="text" class="form-control" id="phone-number" placeholder="+998" required>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button type="button" class="btn send">Ariza Qoldirish</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <Emailjs/>
                
             </div>
 

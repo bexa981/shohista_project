@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import AOS from "aos";
-
+import Emailjs from './Emailjs.vue';
 onMounted(() => {
     AOS.init();
 })
@@ -29,7 +29,7 @@ onMounted(() => {
             </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza
                 qoldirish</button>
-
+          <Emailjs/>
             
         </div>
     </div>

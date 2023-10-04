@@ -100,7 +100,7 @@ onMounted(() => {
    width: 550px;
    height: 520px;
    background-color: gray;
-   background-image: url(/images/apelsin.jpg);
+   
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -126,7 +126,7 @@ onMounted(() => {
    width: 300px;
    height: 250px;
    background-color: gray;
-   background-image: url(/images/apelsin.jpg);
+   
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
