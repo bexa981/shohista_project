@@ -45,7 +45,7 @@ onMounted(() => {
 
         </div>
         <div class="job-title">
-            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayeva</p>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayevaa</p>
             <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Genetik kvanti <br>
                 tahlili yetuk <span>Mutahasisi</span>
             </h1>
