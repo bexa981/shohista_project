@@ -20,7 +20,7 @@ onMounted(() => {
                 <Emailjs/>
             </div>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1500" class="book-photo">
+        <div data-aos="fade-right" data-aos-duration="1500" class="book-photo">
             <img src="/images/books.jpg" alt="">
         </div>
 

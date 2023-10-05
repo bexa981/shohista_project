@@ -20,7 +20,7 @@ const items = ref([{
     id: 2,
     title: 'Kvant taxlili seansi tashkil qilinadi-muammo yechiladi Va bu holat takrorlanmasligi uchun yangi neyron hosil qilinadi ',
     
-    animation: 'fade-left'
+    animation: 'fade-right'
 },
 {
     id: 3,
@@ -31,7 +31,7 @@ const items = ref([{
 {
     id: 4,
     title: 'Gormoniya va energiyaga toyinish',
-   
+    animation: 'fade-right'
 },
 
 ])

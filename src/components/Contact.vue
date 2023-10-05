@@ -7,7 +7,7 @@ import AOS from "aos";
 import Emailjs from './Emailjs.vue';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import emailjs from 'emailjs-com';
-
+import {mask} from 'vue-the-mask'
 onMounted(() => {
     AOS.init();
 })
@@ -24,7 +24,7 @@ const sendMail2 = () => {
                 text: 'Xabaringiz jo`natildi',
 
             })
-            inputFieldReset.value = " ";
+            form.value.reset();
         }, (error) => {
             Swal.fire({
                 icon: 'error',
@@ -91,7 +91,7 @@ const sendMail2 = () => {
                 <form class="form" ref="form" @submit.prevent="sendMail2">
                     <div class="inputs" data-aos="fade-up" data-aos-duration="1500">
                         <input name="name" class="name" type="text" placeholder="Ism" :value="inputFieldReset" required>
-                        <input name="phone" class="name" type="text" placeholder="+998" :value="inputFieldReset" required>
+                        <input name="phone" class="name" type="tel"  v-mask="'+998 (##)-###-##-##'" placeholder="+998" masked="true" :value="inputFieldReset" required>
                     </div>
                     <textarea name="message" data-aos="fade-up" required data-aos-duration="1500" :value="inputFieldReset"
                         id="" cols="40" rows="6" placeholder="Xabar..."></textarea>

@@ -24,7 +24,7 @@ onMounted(() => {
 
          <div class="right-video">
 
-            <div data-aos="fade-left" data-aos-duration="1500" class="right-one">
+            <div data-aos="fade-up" data-aos-duration="1500" class="right-one">
                <div class="video1 video">
                   <div class="player-container">
                <vue3-video-player @play="your_method" src="/videos/video8.mp4"
@@ -38,7 +38,7 @@ onMounted(() => {
             </div>
                </div>
             </div>
-            <div data-aos="fade-left" data-aos-duration="1500" class="right-one">
+            <div data-aos="fade-right" data-aos-duration="1500" class="right-one">
                <div class="video3 video">
                   <div class="player-container">
                <vue3-video-player @play="your_method" src="/videos/video6.mp4"

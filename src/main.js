@@ -8,13 +8,15 @@ import Vue3VideoPlayer from '@cloudgeek/vue3-video-player'
 import '@cloudgeek/vue3-video-player/dist/vue3-video-player.css'
 import App from './App.vue'
 import router from './router'
+import VueTheMask from 'vue-the-mask'
 
 const app = createApp(App)
 app.use(Vue3VideoPlayer, {
-    lang: 'en'
-  })
+  lang: 'en'
+})
+
 app.use(createPinia())
 app.use(router)
 app.use(VueSweetalert2);
-
+app.use(VueTheMask)
 app.mount('#app')

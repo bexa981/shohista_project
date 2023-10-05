@@ -15,11 +15,11 @@ onMounted(() => {
                         alt=""></span> </p> -->
 
         </div>
-        <div data-aos="fade-left" data-aos-duration="1500" class="right-info">
+        <div  class="right-info">
             <img src="/images/hello.webp" alt="">
-            <h2>Men bu sohani <br> tanlaganim sababi</h2>
-            <p class="making">Keling, o'zimni qisqacha tanishtiraman</p>
-            <p class="hello">Salom! Man Shohista Djurabayeva oliy ma’lumotli vrach, psixogenetik, kvant taxlili yetuk
+            <h2 data-aos="fade-up" data-aos-duration="1500">Men bu sohani <br> tanlaganim sababi</h2>
+            <p data-aos="fade-up" data-aos-duration="1500" class="making">Keling, o'zimni qisqacha tanishtiraman</p>
+            <p data-aos="fade-up" data-aos-duration="1500" class="hello">Salom! Man Shohista Djurabayeva oliy ma’lumotli vrach, psixogenetik, kvant taxlili yetuk
                 ekspertiman. Ôzim Toshkent Tibbiyot Akademiyasini tamomlaganim sababli Inson hayotida genetika Va neyron
                 tizimlari qanchalik ahamiyatli ekanini aniq bilaman. Bunga isbot sifatida ôzim 35.000$ qarzdorlikdan va
                 munosabatlardagi muammolardan ortiqcha qiyinchiliklarsiz chiqib keta olganimni korsatishim mumkin. Aynan
@@ -27,7 +27,7 @@ onMounted(() => {
                 bu metodni chuqur ôzlashtirishni boshladim. Bugungi kunga kelib esa 5000 dan ziyod mijozlarga kvant metodi
                 asosida hayotlarini yaxshilashga yordam berib kelmoqdaman.
             </p>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza
+            <button data-aos="fade-up" data-aos-duration="1500" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ariza
                 qoldirish</button>
           <Emailjs/>
             

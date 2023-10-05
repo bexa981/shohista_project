@@ -11,7 +11,7 @@ onMounted(() => {
 
 <template>
     <div class="members">
-        <div data-aos="fade-right" data-aos-duration="1500" class="memebers-info">
+        <div data-aos="fade-up" data-aos-duration="1500" class="memebers-info">
             <h2>Bizning mijozimiz erishgan natijalari</h2>
             <p class="title">Mijozimizning keltirilgan so'zlari</p>
             <p class="info">“Holatim ancha yaxshi qaysiki bo'ladigan munosabatlar va moliyaviy, tinchlik, hotirjamlik
@@ -22,7 +22,7 @@ onMounted(() => {
                 qoldirish</button>
             <Emailjs />
         </div>
-        <div data-aos="fade-left" data-aos-duration="1500" class="member-video">
+        <div data-aos="fade-up" data-aos-duration="1500" class="member-video">
             <div class="player-container">
                 <vue3-video-player @play="your_method" src="/videos/klent2info.mp4"></vue3-video-player>
             </div>

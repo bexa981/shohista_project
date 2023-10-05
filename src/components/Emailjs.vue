@@ -7,17 +7,33 @@ export default {
  setup() {
     const form = ref(null);
     const inputFieldReset = ref(null);
-
-    const sendMail = () => {
-        emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
-        .then(() => {
-            Swal.fire({
+ 
+    function success(){
+     if(inputFieldReset){
+        inputFieldReset.value=''
+        Swal.fire({
         icon: 'success',
         title: 'Jo`natildi',
         text: 'Xabaringiz jo`natildi',
 
     })
-          inputFieldReset.value = " ";
+     }
+     else if(inputFieldReset.value==''){
+        inputFieldReset.value=''
+        Swal.fire({
+        icon: 'error',
+        title: 'Xato..',
+        text: 'Malumotlarni to`liq kiriting',
+
+    })
+     }
+    }
+    const sendMail = () => {
+        emailjs.sendForm('service_abqzihs', 'template_263nu0d', form.value, '5GcDMwXMSQshjU1YE')
+        .then(() => {
+            inputFieldReset.value=''
+         success()
+         console.log(success());
         }, (error) => {
             Swal.fire({
         icon: 'error',
@@ -26,10 +42,12 @@ export default {
 
     });
         }); 
+        
       }
       return{
     form,
     inputFieldReset,
+    success,
     sendMail
   }
     }
@@ -88,7 +106,7 @@ export default {
 </script>
 
 <template>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" validate>
+    <div class="modal fade displaying" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" validate>
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -104,12 +122,12 @@ export default {
                         </div>
                         <div class="mb-3">
                             <label for="phone-number" class="col-form-label">Telefon raqamingiz:</label>
-                            <input name="phone"  type="text" class="form-control" id="phone-number" :value="inputFieldReset" placeholder="+998"
+                            <input name="phone"  type="text" class="form-control" id="phone-number" :value="inputFieldReset"  v-mask="'+998 (##)-###-##-##'" placeholder="+998"
                                 required>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn close" data-bs-dismiss="modal">Yopish</button>
-                            <button name="send" data-bs-toggle="modal"   data-bs-target="#exampleModal" type="submit"
+                            <button name="send" id="send"  data-bs-target="#exampleModal" type="submit"
                                 class="btn send">Ariza Qoldirish</button>
                         </div>
                     </form>
