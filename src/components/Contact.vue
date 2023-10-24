@@ -400,6 +400,9 @@ form button:hover {
 }
 
 @media only screen and (max-width: 850px) {
+    form button{
+        margin-bottom: 60px;
+    }
     .links-contact {
         display: none;
     }
@@ -434,6 +437,7 @@ form button:hover {
 
     form {
         width: 100%;
+        height: fit-content;
     }
 
     .inputs input {
@@ -459,11 +463,11 @@ form button:hover {
 
 @media only screen and (max-width: 443px) {
     .message .inputs {
-        width: 80%;
+        width: 90%;
     }
 
     .message textarea {
-        width: 80%;
+        width: 90%;
     }
 }
 </style>

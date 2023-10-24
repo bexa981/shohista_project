@@ -47,13 +47,15 @@ onMounted(() => {
         <div class="job-title">
             <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Shohista Djurabayeva</p>
             <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Genetik kvanti <br>
-                tahlili yetuk <span>Mutahasisi</span>
+                tahlili yetuk <span>Mutaxassisi</span>
             </h1>
             <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="with-name">Butun
-                dunyo bôylan insonlarga g’alaba qozonishlari va omadga erishishlari uchun yordam beraman
+                dunyo bôylab insonlarga g’alaba qozonishlari va omadga erishishlari uchun yordam beraman
             </p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
                 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000">Ariza qoldirish</button>
+
+            <a target="_blank" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" class="uzum" href="https://www.apelsin.uz/open-service?serviceId=498611485"><div></div></a>
         </div>
         <Emailjs/>        
     </div>
@@ -69,6 +71,21 @@ onMounted(() => {
     background-color: #fff;
     color: rgb(231, 35, 94);
     border: 3px solid rgb(231, 35, 94);
+}
+.uzum{
+    margin-top: 20px;
+    
+    
+}
+.uzum div{
+    border-radius: 30px;
+    width: 200px;
+    height: 65px;
+    background-image: url('https://marketing.uz/brend-goda-2022/uz/uploads/works/covers/95aaab99575626de5ca661c102320241.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    
 }
 
 .main {
@@ -287,6 +304,10 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 600px) {
+    .uzum div{
+        width: 140px;
+        height: 45px;
+    }
     .main {
         display: block;
         position: relative;

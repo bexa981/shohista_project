@@ -97,6 +97,10 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 600px) {
+    .members h2{
+        font-size: 25px;
+        padding-top: 20px;
+    }
     .members {
         padding: 30px 0 30px 0;
 

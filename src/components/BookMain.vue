@@ -206,6 +206,7 @@ onMounted(() => {
     .book-photo img {
         width: 80%;
         align-self: center;
+        margin-left: 0px;
     }
 
     .book-info .download {
@@ -243,7 +244,7 @@ onMounted(() => {
         margin-left: 0px;
         margin-top: 40px;
         line-height: 35px;
-        font-size: 15px;
+        font-size: 20px;
         color: rgb(49, 48, 48);
     }
 

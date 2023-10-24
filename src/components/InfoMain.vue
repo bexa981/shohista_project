@@ -10,9 +10,7 @@ onMounted(() => {
     <div class="info-main">
         <div class="left-info">
             <img src="/images/left-info.jpg" alt="">
-            <!-- <p data-aos="zoom-in"  data-aos-duration="1500">FOLLOW <br> ME ON <br><span>Instagram <img
-                        src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png"
-                        alt=""></span> </p> -->
+            
 
         </div>
         <div  class="right-info">

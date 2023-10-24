@@ -59,13 +59,20 @@ onMounted(() => {
     background-color: #fff;
  }
  @media only screen and (max-width: 600px){
-
+    .advertisment h2{
+        font-size: 25px;
+        padding-top: 20px;
+        text-align: center;
+    }
     .advertisment p{
-        width: 400px;
+        width: 100%;
+        padding: 10px;
     }
     .advertisment{
         height: auto;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .advertisment button{
         margin-top: 30px;

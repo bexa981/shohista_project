@@ -133,6 +133,12 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 650px) {
+   .blog-main h2{
+      font-size: 25px;
+   }
+   .blog-main p{
+      font-size: 25px;
+   }
    .right-one {
       flex-direction: column;
    }
