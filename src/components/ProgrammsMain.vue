@@ -12,7 +12,7 @@ onMounted(() => {
 
 const items = ref([{
     id: 1,
-    photo: 'https://profayler.uz/wp-content/uploads/2021/03/unnamed-512x340.jpg',
+    photo: 'https://akme.uz/bahor-qaytsaydi-yana/2021/03/unnamed.jpg',
     title: 'Psixologiya va kouchingdan chuqurroq anglagan holda',
     helpful: '. Gipnozlarsiz. NLP va manipulyatsiyalarsiz',
     info: 'Siz bilan birgalikda sizning hayotingizga tasiri bor bolgan kòrinmas neyronlarning òzaro bogliqligini anglaymiz. Shu bilan birgalikda qaytariluvchi jarayon va holatlarni genetik darajada òzgartiramiz.'
@@ -82,7 +82,7 @@ const items = ref([{
 }
 
 .card {
-    width: 400px;
+    width: 25%;
     background-color:#fff;
     border-radius: 10px;
     text-align: center;
@@ -135,7 +135,7 @@ const items = ref([{
  color: rgb(231, 35, 94);
 
 }
-@media only screen and (max-width: 530px){
+@media only screen and (max-width: 600px){
     .programs-main .title{
     text-align: center;
     color: white;
@@ -144,6 +144,9 @@ const items = ref([{
     
     font-size: 25px;
     padding-bottom: 30px;
+}
+.card{
+    width: 350px;
 }
 }
 </style>
